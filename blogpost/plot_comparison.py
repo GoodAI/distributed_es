@@ -154,7 +154,7 @@ def pendulum():
     """Plot results of the partially observable pendulum from the Sacred"""
 
     cma = [5160, 5162, 5163, 5165, 5167]
-    cma_30ep = [5231, 5232, 5235]  # , 5243]  # these two are running
+    cma_30ep = [5231, 5232, 5234, 5235, 5238]
     optim_es = [5122, 5123, 5124, 5126, 5127, 5129]
     optim_es_pop_size200 = [5154, 5156, 5157, 5158, 5159]
     es = [5114, 5115, 5117, 5118, 5119]
