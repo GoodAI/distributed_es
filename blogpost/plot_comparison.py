@@ -154,6 +154,7 @@ def pendulum():
     """Plot results of the partially observable pendulum from the Sacred"""
 
     cma = [5160, 5162, 5163, 5165, 5167]
+    cma_30ep = [5231, 5232]  # , 5243, 5235]  # these two are running
     optim_es = [5122, 5123, 5124, 5126, 5127, 5129]
     optim_es_pop_size200 = [5154, 5156, 5157, 5158, 5159]
     es = [5114, 5115, 5117, 5118, 5119]
@@ -166,11 +167,12 @@ def pendulum():
 
     plot_runs(es, label='ES; 5ep')
     plot_runs(cma, label='CMA; 5ep', include_all=True)
+    plot_runs(cma_30ep, label='CMA; 30ep', include_all=True)
     plot_runs(optim_es, label='OptimES; 10ep, pop_size=50')
     plot_runs(optim_es_pop_size200, label='OptimES; 5ep, pop_size=200')
     plt.legend()
     plt.ylim(bottom=-1400)
-    plt.ylim(top=-259)
+    # plt.ylim(top=-259)
 
     plt.savefig(f'{FOLDER}/pendulum_partial.png', format='png')
     plt.show()

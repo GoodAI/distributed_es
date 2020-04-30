@@ -367,11 +367,14 @@ def upload(ip: str, pem_file: str, dry_run: bool):
     if not dry_run:
         os.system(command)
 
+    print(f'Uploading the remote_experiment.sh script')
+    command = f'scp -i {pem_file} remote_experiment.sh ubuntu@{ip}:{target_path}'
+    if not dry_run:
+        os.system(command)
+
     print('\nDONE, now ssh to the machine\n\n'
           f'ssh -i {pem_file} ubuntu@{ip}\n\n'
-          'and untar the contents and prepare for run:\n\n'
-          f'rm -rf {repo_name} && mkdir {repo_name} && tar -xvf /home/ubuntu/{TAR_NAME} -C /home/ubuntu/ && '
-          f'cd {repo_name} && export PYTHONPATH=.\n')
+          f'and run the experiment ./remote_experiment.sh')
 
 
 if __name__ == '__main__':
