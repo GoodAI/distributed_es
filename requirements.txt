@@ -1,0 +1,52 @@
+
+# torch installed using this:
+#   conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+
+numpy
+pandas
+matplotlib
+
+################### sacred
+########################################################################
+sacred
+pymongo
+gitpython
+bokeh
+tqdm
+nevergrad
+
+################### OpeanAI gym
+########################################################################
+gym
+
+# some environments, like lander, are dependent on box2d, box2d depends on swig:
+#
+#   sudo apt-get install swig
+
+box2d
+box2d-kengz
+
+
+# pybullet gym is pre-instaled in the AWS AMI, for running experiments locally, install like this:
+#
+#   git clone https://github.com/benelot/pybullet-gym.git
+#   cd pybullet-gym
+#   pip install -e .
+
+
+################ multiprocessing
+ray
+psutil  # ray uses this for logging
+setproctitle
+
+
+################## OpenAI - ES
+
+redis
+click
+boto3
+scipy
+opencv-python
+
+# install the redis-server
+# sudo apt-get install redis-server
