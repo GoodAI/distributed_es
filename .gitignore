@@ -1,0 +1,14 @@
+*.pt
+*.pyc
+
+*.log
+
+*.pkl
+
+data/
+Models/
+.idea/
+.DS_Store
+awscli-bundle/*
+/deeprl/experiments/autorun.py
+log.txt
