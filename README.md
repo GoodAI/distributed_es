@@ -118,11 +118,9 @@ Here, the policy has to infer the velocity from consecutive observations,
 
 ![Convergence of recurrent policy on PartiallyObservablePendulum task](blogpost/img/pendulum_partial.png)
 
-Here, in case of good initialization of network weights, the CMA can find an acceptable (but not perfect) solution.
-Otherwise, the algorithm gets stuck in the state where the policy is able to swing up the pendulum,
+Here, most of the algorithms (up to 5ep/fitness) got stuck in the state where the policy is able to swing up the pendulum,
  but is unable to apply the opposite force to stop its rotation.
 
-In this case, all algorithms had problems with finding a good policy even in the case of 5 evaluations per fitness. 
 One of possible reasons can be that initial conditions influence the states more (so more evaluations could help),
  another possibility is that the task is more demanding on the precision of actions and/or that discovery of the memory
   mechanism and its usage is non-trivial.
