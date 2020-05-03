@@ -125,7 +125,7 @@ One of possible reasons can be that initial conditions influence the states more
  another possibility is that the task is more demanding on the precision of actions and/or that discovery of the memory
   mechanism and its usage is non-trivial.
 
-Therefore we ran CMA was ran with 30 episodes per fitness, which considerably helps with the performance and stability.
+Therefore we ran CMA with 30 episodes per fitness, which considerably helps with the performance and stability.
 
 It is also notable that the CMA behaves quite differently from other algorithms at the beginning of the run.
 
